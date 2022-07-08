@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E99654152878A68100ACA39B /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99654142878A68100ACA39B /* HomeFactory.swift */; };
+		E99654172878A6A200ACA39B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99654162878A6A200ACA39B /* HomePresenter.swift */; };
+		E99654192878A6C000ACA39B /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99654182878A6C000ACA39B /* HomeModel.swift */; };
+		E996541B2878A6D600ACA39B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996541A2878A6D600ACA39B /* HomeRouter.swift */; };
+		E996541D2878A6EE00ACA39B /* HomeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996541C2878A6EE00ACA39B /* HomeInterface.swift */; };
+		E996541F2878A6FF00ACA39B /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996541E2878A6FF00ACA39B /* HomeInteractor.swift */; };
 		E99EABB328789D95006BD772 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99EABB228789D95006BD772 /* AppDelegate.swift */; };
 		E99EABB528789D95006BD772 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99EABB428789D95006BD772 /* SceneDelegate.swift */; };
 		E99EABB728789D95006BD772 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99EABB628789D95006BD772 /* HomeViewController.swift */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E99654142878A68100ACA39B /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		E99654162878A6A200ACA39B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		E99654182878A6C000ACA39B /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		E996541A2878A6D600ACA39B /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		E996541C2878A6EE00ACA39B /* HomeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterface.swift; sourceTree = "<group>"; };
+		E996541E2878A6FF00ACA39B /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		E99EABAF28789D95006BD772 /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99EABB228789D95006BD772 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E99EABB428789D95006BD772 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +91,13 @@
 		E99654132878A61600ACA39B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E99654142878A68100ACA39B /* HomeFactory.swift */,
+				E99654182878A6C000ACA39B /* HomeModel.swift */,
+				E99654162878A6A200ACA39B /* HomePresenter.swift */,
+				E996541A2878A6D600ACA39B /* HomeRouter.swift */,
+				E996541C2878A6EE00ACA39B /* HomeInterface.swift */,
 				E99EABB628789D95006BD772 /* HomeViewController.swift */,
+				E996541E2878A6FF00ACA39B /* HomeInteractor.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -306,7 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E99EABB728789D95006BD772 /* HomeViewController.swift in Sources */,
+				E99654152878A68100ACA39B /* HomeFactory.swift in Sources */,
 				E99EABB328789D95006BD772 /* AppDelegate.swift in Sources */,
+				E996541F2878A6FF00ACA39B /* HomeInteractor.swift in Sources */,
+				E996541D2878A6EE00ACA39B /* HomeInterface.swift in Sources */,
+				E99654192878A6C000ACA39B /* HomeModel.swift in Sources */,
+				E99654172878A6A200ACA39B /* HomePresenter.swift in Sources */,
+				E996541B2878A6D600ACA39B /* HomeRouter.swift in Sources */,
 				E99EABBD28789D95006BD772 /* Movies.xcdatamodeld in Sources */,
 				E99EABB528789D95006BD772 /* SceneDelegate.swift in Sources */,
 			);
