@@ -19,7 +19,11 @@ struct HomeFactory {
 
         let interactor: HomeInteractor = .init()
 
-        let presenter: HomePresenter = .init()
+        let presenter: HomePresenter = .init(
+            view: viewController,
+            router: router,
+            interactor: interactor
+        )
         
         return viewController
     }

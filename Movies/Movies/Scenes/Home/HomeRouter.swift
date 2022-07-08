@@ -7,6 +7,6 @@
 
 import Foundation
 
-class HomeRouter {
+class HomeRouter: HomeRoutable {
     
 }

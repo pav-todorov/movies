@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - Home View Controller
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, HomeViewable {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct HomeInteractor {
+struct HomeInteractor: HomeInteractive {
     
 }
