@@ -25,6 +25,8 @@ struct HomeFactory {
             interactor: interactor
         )
         
+        viewController.presenter = presenter
+        
         return viewController
     }
 }
