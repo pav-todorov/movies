@@ -7,10 +7,33 @@
 
 import UIKit
 
-class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDelegate {
 
+    // MARK: Properties
     var window: UIWindow?
-
+    
+    lazy var homeTabBarController: UITabBarController = {
+        let tabBarController = UITabBarController()
+        
+        let home = UIViewController()
+        home.tabBarItem = UITabBarItem(title: "Home", image: .init(systemName: "house.circle"), selectedImage: .init(systemName: "house.circle.fill"))
+        
+        let search = UIViewController()
+        search.tabBarItem = UITabBarItem(title: "Search", image: .init(systemName: "magnifyingglass.circle"), selectedImage: .init(systemName: "magnifyingglass.circle.fill"))
+        
+        let favorites = UIViewController()
+        favorites.tabBarItem = UITabBarItem(title: "Favorites", image: .init(systemName: "star.circle"), selectedImage: .init(systemName: "star.circle.fill"))
+        
+        tabBarController.viewControllers = [
+            home,
+            search,
+            favorites
+        ]
+        
+        tabBarController.delegate = self
+        
+        return tabBarController
+    }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -20,7 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
+        window?.rootViewController = homeTabBarController
         window?.makeKeyAndVisible()
     }
 
