@@ -5,8 +5,22 @@
 //  Created by Pavel on 8.07.22.
 //
 
-import Foundation
+import UIKit
 
 struct HomeFactory {
+    // MARK: Initalizers
+    private init() {}
     
+    // MARK: Factory
+    static func `default`() -> UIViewController {
+        let viewController: HomeViewController = .init()
+        
+        let router: HomeRouter = .init()
+
+        let interactor: HomeInteractor = .init()
+
+        let presenter: HomePresenter = .init()
+        
+        return viewController
+    }
 }
