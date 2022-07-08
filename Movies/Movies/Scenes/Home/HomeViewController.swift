@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  Movies
 //
 //  Created by Pavel Todorov on 8.07.22.
@@ -7,7 +7,8 @@
 
 import UIKit
 
-class Home: UIViewController {
+// MARK: - Home View Controller
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
