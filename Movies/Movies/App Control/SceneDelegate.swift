@@ -5,7 +5,8 @@
 //  Created by Pavel Todorov on 8.07.22.
 //
 
-import UIKit
+import SwiftUI
+import Search
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDelegate {
 
@@ -18,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
         let home = UIViewController()
         home.tabBarItem = UITabBarItem(title: "Home", image: .init(systemName: "house.circle"), selectedImage: .init(systemName: "house.circle.fill"))
         
-        let search = UIViewController()
+        let search = UIHostingController(rootView: SearchView())
         search.tabBarItem = UITabBarItem(title: "Search", image: .init(systemName: "magnifyingglass.circle"), selectedImage: .init(systemName: "magnifyingglass.circle.fill"))
         
         let favorites = UIViewController()
