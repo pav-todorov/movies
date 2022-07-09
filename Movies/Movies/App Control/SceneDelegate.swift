@@ -45,8 +45,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
         ]
         
         tabBarController.delegate = self
-
-        tabBarController.tabBar.isTranslucent = false
         
         return tabBarController
     }()

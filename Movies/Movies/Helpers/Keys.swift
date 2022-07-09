@@ -10,10 +10,10 @@ import Foundation
 // MARK: - Keys
 public struct Keys {
     // MARK: Properties
-    static let key = APIKey.TMDBkey
-    static let baseURL: String = "https://api.themoviedb.org"
-    static let baseAPIURL: String = "\(baseURL)/3/movie"
-    static let baseImageURL = "https://image.tmdb.org/t/p/w500/"
+    public static let key = APIKey.TMDBkey
+    public static let baseURL: String = "https://api.themoviedb.org"
+    public static let baseAPIURL: String = "\(baseURL)/3/movie"
+    public static let baseImageURL = "https://image.tmdb.org/t/p/w500/"
     
     // MARK: Notifications
     struct Notifications {}
