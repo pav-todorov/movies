@@ -48,6 +48,8 @@ struct MovieResultEntity: Decodable {
             self.title = try container.decode(String.self, forKey: .title)
         }
         
+        init() {}
+        
         // MARK: Properties
         var posterPath: String = ""
         var overview: String = ""

@@ -7,6 +7,20 @@
 
 import Foundation
 
-class HomeRouter: HomeRoutable {
+// MARK: - Home Router
+final class HomeRouter<Navigator>: HomeRoutable
+    where Navigator: HomeNavigable
+{
+    // MARK: Properties
+    private unowned let navigator: Navigator
     
+    // MARK: Initializers
+    init(navigator: Navigator) {
+        self.navigator = navigator
+    }
+    
+    // MARK: Navigable
+    func toHomeDetail(with parameters: HomeDetailParameters) {
+        navigator.present(HomeDetailFactory.default(parameters: parameters), animated: true)
+    }
 }

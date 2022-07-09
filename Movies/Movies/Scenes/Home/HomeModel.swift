@@ -23,7 +23,7 @@ struct HomeModel {
     // MARK: Colors
     struct Colors {
         // MARK: Properties
-        static var background: UIColor? { .systemBackground }
+        static var background: UIColor? { .red }
         
         // MARK: Initializers
         private init() {}

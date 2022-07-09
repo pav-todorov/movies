@@ -18,13 +18,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
         let tabBarController = UITabBarController()
         
         let home = HomeFactory.default()
-        home.tabBarItem = UITabBarItem(title: "Home", image: .init(systemName: "house.circle"), selectedImage: .init(systemName: "house.circle.fill"))
+        home.tabBarItem = UITabBarItem(
+            title: "Home",
+            image: .init(systemName: "house.circle"),
+            selectedImage: .init(systemName: "house.circle.fill")
+        )
         
         let search = UIHostingController(rootView: SearchView())
-        search.tabBarItem = UITabBarItem(title: "Search", image: .init(systemName: "magnifyingglass.circle"), selectedImage: .init(systemName: "magnifyingglass.circle.fill"))
+        search.tabBarItem = UITabBarItem(
+            title: "Search",
+            image: .init(systemName: "magnifyingglass.circle"),
+            selectedImage: .init(systemName: "magnifyingglass.circle.fill")
+        )
         
         let favorites = UIHostingController(rootView: FavoritesView())
-        favorites.tabBarItem = UITabBarItem(title: "Favorites", image: .init(systemName: "star.circle"), selectedImage: .init(systemName: "star.circle.fill"))
+        favorites.tabBarItem = UITabBarItem(
+            title: "Favorites",
+            image: .init(systemName: "star.circle"),
+            selectedImage: .init(systemName: "star.circle.fill")
+        )
         
         tabBarController.viewControllers = [
             home,
@@ -33,6 +45,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
         ]
         
         tabBarController.delegate = self
+
+        tabBarController.tabBar.isTranslucent = false
         
         return tabBarController
     }()

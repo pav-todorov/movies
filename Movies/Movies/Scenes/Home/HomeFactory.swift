@@ -15,7 +15,7 @@ struct HomeFactory {
     static func `default`() -> UIViewController {
         let viewController: HomeViewController = .init()
         
-        let router: HomeRouter = .init()
+        let router: HomeRouter = .init(navigator: viewController)
 
         let interactor: HomeInteractor = .init()
 
