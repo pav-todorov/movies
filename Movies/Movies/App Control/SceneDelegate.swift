@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Search
+import Favorites
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDelegate {
 
@@ -22,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
         let search = UIHostingController(rootView: SearchView())
         search.tabBarItem = UITabBarItem(title: "Search", image: .init(systemName: "magnifyingglass.circle"), selectedImage: .init(systemName: "magnifyingglass.circle.fill"))
         
-        let favorites = UIViewController()
+        let favorites = UIHostingController(rootView: FavoritesView())
         favorites.tabBarItem = UITabBarItem(title: "Favorites", image: .init(systemName: "star.circle"), selectedImage: .init(systemName: "star.circle.fill"))
         
         tabBarController.viewControllers = [
