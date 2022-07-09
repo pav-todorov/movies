@@ -1,5 +1,5 @@
 //
-//  GetTopRatedMoviesEntity.swift
+//  MovieResultEntity.swift
 //  Movies
 //
 //  Created by Pavel on 9.07.22.
@@ -7,8 +7,7 @@
 
 import Foundation
 
-// MARK: - Get Top Rated Movies Entity
-struct GetTopRatedMoviesEntity: Decodable {
+struct MovieResultEntity: Decodable {
     // MARK: Initializer
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -67,4 +66,5 @@ struct GetTopRatedMoviesEntity: Decodable {
             case title = "title"
         }
     }
+
 }

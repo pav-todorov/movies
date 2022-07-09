@@ -1,19 +1,19 @@
 //
-//  GetTopRatedMoviesNetworkGateway.swift
+//  GetNowPlayingMoviesNetworkGateway.swift
 //  Movies
 //
 //  Created by Pavel on 9.07.22.
 //
 
-import RxSwift
 import Extensions
+import RxSwift
 
-// MARK: - Get Top Rated Movies Network Gateway
-struct GetTopRatedMoviesNetworkGateway: GetTopRatedMoviesGateway {
+// MARK: Get Now Playing Movies Network Gateway
+struct GetNowPlayingMoviesNetworkGateway {
     func fetch(
-        with parameters: GetTopRatedMoviesGatewayParameters) -> Observable<MovieResultEntity>
+        with parameters: GetNowPlayingMoviesGatewayParameters) -> Observable<MovieResultEntity>
     {
-        guard let url = URL(string: "\(Keys.baseAPIURL)/top_rated\(Keys.key)&\(parameters.page ?? 1)") else {
+        guard let url = URL(string: "\(Keys.baseAPIURL)/now_playing\(Keys.key)&\(parameters.page ?? 1)") else {
             fatalError()
         }
         
@@ -24,4 +24,5 @@ struct GetTopRatedMoviesNetworkGateway: GetTopRatedMoviesGateway {
                 return Observable.just(MovieResultEntity())
             }
     }
+
 }
