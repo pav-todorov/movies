@@ -10,6 +10,7 @@ import RxSwift
 
 // MARK: Get Now Playing Movies Network Gateway
 struct GetNowPlayingMoviesNetworkGateway {
+    // MARK: Gatewayable
     func fetch(
         with parameters: GetNowPlayingMoviesGatewayParameters) -> Observable<MovieResultEntity>
     {

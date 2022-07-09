@@ -10,8 +10,9 @@ import Extensions
 
 // MARK: Get Popular Movies Network Gateway
 struct GetPopularMoviesNetworkGateway {
+    // MARK: Gatewayable
     func fetch(
-        with parameters: GetTopRatedMoviesGatewayParameters) -> Observable<MovieResultEntity>
+        with parameters: GetPopularMoviesParameters) -> Observable<MovieResultEntity>
     {
         guard let url = URL(string: "\(Keys.baseAPIURL)/popular\(Keys.key)&\(parameters.page ?? 1)") else {
             fatalError()

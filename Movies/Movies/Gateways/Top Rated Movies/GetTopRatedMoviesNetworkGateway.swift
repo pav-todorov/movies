@@ -10,6 +10,7 @@ import Extensions
 
 // MARK: - Get Top Rated Movies Network Gateway
 struct GetTopRatedMoviesNetworkGateway: GetTopRatedMoviesGateway {
+    // MARK: Gatewayable
     func fetch(
         with parameters: GetTopRatedMoviesGatewayParameters) -> Observable<MovieResultEntity>
     {

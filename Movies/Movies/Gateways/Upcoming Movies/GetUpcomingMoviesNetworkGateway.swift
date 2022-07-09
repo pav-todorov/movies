@@ -10,8 +10,9 @@ import RxSwift
 
 // MARK: Get Upcoming Movies Network Gateway
 struct GetUpcomingMoviesNetworkGateway {
+    // MARK: Gatewayable
     func fetch(
-        with parameters: GetNowPlayingMoviesGatewayParameters) -> Observable<MovieResultEntity>
+        with parameters: GetUpcomingMoviesGatewayParameters) -> Observable<MovieResultEntity>
     {
         guard let url = URL(string: "\(Keys.baseAPIURL)/upcoming\(Keys.key)&\(parameters.page ?? 1)") else {
             fatalError()
