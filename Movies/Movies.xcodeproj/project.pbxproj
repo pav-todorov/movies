@@ -193,13 +193,13 @@
 		E99EABB128789D95006BD772 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
-				E9363DD52879673400563999 /* Helpers */,
-				E9363DD32879670400563999 /* Services and Managers */,
-				E9363DD2287966FF00563999 /* Gateways */,
 				E99EABE528789DEB006BD772 /* App Info */,
 				E99EABE728789E33006BD772 /* App Control */,
 				E99EABE828789E3E006BD772 /* Scenes */,
 				E99EABEA28789E6C006BD772 /* Resources */,
+				E9363DD2287966FF00563999 /* Gateways */,
+				E9363DD32879670400563999 /* Services and Managers */,
+				E9363DD52879673400563999 /* Helpers */,
 			);
 			path = Movies;
 			sourceTree = "<group>";

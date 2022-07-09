@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
     lazy var homeTabBarController: UITabBarController = {
         let tabBarController = UITabBarController()
         
-        let home = UIViewController()
+        let home = HomeFactory.default()
         home.tabBarItem = UITabBarItem(title: "Home", image: .init(systemName: "house.circle"), selectedImage: .init(systemName: "house.circle.fill"))
         
         let search = UIHostingController(rootView: SearchView())
