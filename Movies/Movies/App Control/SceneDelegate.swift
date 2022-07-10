@@ -15,12 +15,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
     // MARK: Properties
     var window: UIWindow?
     
+    private typealias LocStrings = LocalizedStrings.Modules.Tabbar
+    
     lazy var homeTabBarController: UITabBarController = {
         let tabBarController = UITabBarController()
         
         let home = HomeFactory.default()
         home.tabBarItem = UITabBarItem(
-            title: "Home",
+            title: LocStrings.modules_tabbar_home_title,
             image: .init(systemName: "house.circle"),
             selectedImage: .init(systemName: "house.circle.fill")
         )
@@ -32,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
                      CoreDataManager.shared.persistentContainer.viewContext)
         )
         search.tabBarItem = UITabBarItem(
-            title: "Search",
+            title: LocStrings.modules_tabbar_search_title,
             image: .init(systemName: "magnifyingglass.circle"),
             selectedImage: .init(systemName: "magnifyingglass.circle.fill")
         )
@@ -43,7 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
                  CoreDataManager.shared.persistentContainer.viewContext)
         )
         favorites.tabBarItem = UITabBarItem(
-            title: "Favorites",
+            title: LocStrings.modules_tabbar_favorites_title,
             image: .init(systemName: "star.circle"),
             selectedImage: .init(systemName: "star.circle.fill")
         )

@@ -1,0 +1,19 @@
+/*
+  Localizable.strings
+  Movies
+
+  Created by Pavel on 10.07.22.
+  
+*/
+
+// MARK: - Modules - Tabbar
+"modules_tabbar_home_title" = "Начало";
+"modules_tabbar_search_title" = "Търсене";
+"modules_tabbar_favorites_title" = "Любими";
+
+// MARK: - Modules - Movies
+"modules_movies_now_playing_segment_title" = "По кината";
+"modules_movies_popular_segment_title" = "Популярни";
+"modules_movies_top_rated_segment_title" = "Най-високо оценени";
+"modules_movies_upcoming_segment_title" = "Предстоящи";
+

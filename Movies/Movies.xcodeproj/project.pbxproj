@@ -65,6 +65,7 @@
 		E9EE4188287B280900D89135 /* GetPosterImageGatewayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9363E462879CA4200563999 /* GetPosterImageGatewayable.swift */; };
 		E9EE4189287B282200D89135 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9363DDA2879694400563999 /* APIKey.swift */; };
 		E9EE418B287B462F00D89135 /* MoviesIcon.heic in Resources */ = {isa = PBXBuildFile; fileRef = E9EE418A287B462F00D89135 /* MoviesIcon.heic */; };
+		E9EE4190287B4C9600D89135 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9EE4192287B4C9600D89135 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +154,10 @@
 		E99EABD628789D98006BD772 /* MoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITests.swift; sourceTree = "<group>"; };
 		E99EABD828789D98006BD772 /* MoviesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E9EE418A287B462F00D89135 /* MoviesIcon.heic */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoviesIcon.heic; sourceTree = "<group>"; };
+		E9EE418D287B4ABE00D89135 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E9EE4191287B4C9600D89135 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E9EE4193287B4C9A00D89135 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E9EE4194287B4C9B00D89135 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +411,7 @@
 				E9EE418A287B462F00D89135 /* MoviesIcon.heic */,
 				E99EABBE28789D97006BD772 /* Assets.xcassets */,
 				E99EABBB28789D95006BD772 /* Movies.xcdatamodeld */,
+				E9EE4192287B4C9600D89135 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -527,6 +533,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E99EABC228789D97006BD772 /* LaunchScreen.storyboard in Resources */,
+				E9EE4190287B4C9600D89135 /* Localizable.strings in Resources */,
 				E9EE418B287B462F00D89135 /* MoviesIcon.heic in Resources */,
 				E99EABBF28789D97006BD772 /* Assets.xcassets in Resources */,
 			);
@@ -638,8 +645,19 @@
 				E99EABC128789D97006BD772 /* Base */,
 				E95B97CC287B05DE00B0A353 /* es */,
 				E95B97CD287B061A00B0A353 /* bg */,
+				E9EE418D287B4ABE00D89135 /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E9EE4192287B4C9600D89135 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9EE4191287B4C9600D89135 /* bg */,
+				E9EE4193287B4C9A00D89135 /* en */,
+				E9EE4194287B4C9B00D89135 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -19,10 +19,10 @@ final class HomeViewController:
     // MARK: Subviews
     private lazy var segmentedControl: FluentUI.SegmentedControl = {
         let segmentItems: [FluentUI.SegmentItem] = [
-                SegmentItem(title: "Now Playing"),
-                SegmentItem(title: "Popular"),
-                SegmentItem(title: "Top Rated"),
-                SegmentItem(title: "Upcoming")
+            SegmentItem(title: LocStrings.modules_movies_now_playing_segment_title),
+            SegmentItem(title: LocStrings.modules_movies_popular_segment_title),
+            SegmentItem(title: LocStrings.modules_movies_top_rated_segment_title),
+            SegmentItem(title: LocStrings.modules_movies_upcoming_segment_title)
             ]
         
         let segmentedControl = FluentUI.SegmentedControl(items: segmentItems, style: .primaryPill)
@@ -51,6 +51,7 @@ final class HomeViewController:
     var moviesTableItemsObservable = PublishSubject<MovieResultEntity>()
     
     private typealias UIModel = HomeModel
+    private typealias LocStrings = LocalizedStrings.Modules.Movies
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -102,9 +103,6 @@ final class HomeViewController:
                 self?.moviesTableView.deselectRow(at: indexPath, animated: true)
             }
             .disposed(by: disposeBag)
-        
-//        moviesTableView.rx.reachedBottom
-//                .disposed(by: disposeBag)
     }
         
     private func setUpView() {
