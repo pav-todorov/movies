@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Shared_Models
 
 // MARK: - HomeDetail View Controller
 final class HomeDetailViewController:

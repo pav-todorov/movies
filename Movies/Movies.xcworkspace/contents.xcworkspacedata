@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Shared Models/Shared Models.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Extensions/Extensions.xcodeproj">
    </FileRef>
    <FileRef

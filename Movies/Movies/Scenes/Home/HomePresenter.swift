@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Shared_Models
 
 // MARK: - Home Presenter
 final class HomePresenter<View, Router, Interactor>: HomePresentable

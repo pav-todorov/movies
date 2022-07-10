@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import Shared_Models
 
 // MARK: Home Interactor
 struct HomeInteractor: HomeInteractive {

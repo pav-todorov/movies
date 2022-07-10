@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Shared_Models
 
 // MARK: - Get Top Rated Movies Gateway
 protocol GetTopRatedMoviesGateway {

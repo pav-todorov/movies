@@ -7,6 +7,7 @@
 
 import RxSwift
 import Extensions
+import Shared_Models
 
 // MARK: - Get Top Rated Movies Network Gateway
 struct GetTopRatedMoviesNetworkGateway: GetTopRatedMoviesGateway {

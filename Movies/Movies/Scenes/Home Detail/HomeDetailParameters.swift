@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Shared_Models
 
 // MARK: - HomeDetail Parameters
 struct HomeDetailParameters {

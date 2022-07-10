@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import FluentUI
+import Shared_Models
 
 // MARK: - Home View Controller
 final class HomeViewController:

@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Shared_Models
 
 // MARK: Get Upcoming Movies Gateway
 protocol GetUpcomingMoviesGateway {

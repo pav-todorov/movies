@@ -9,6 +9,7 @@ import RxSwift
 import RxCocoa
 import FluentUI
 import UIKit
+import Shared_Models
 
 // MARK: - Home Viewable
 protocol HomeViewable: AnyObject {

@@ -7,6 +7,7 @@
 
 import RxSwift
 import UIKit
+import Shared_Models
 
 // MARK: - HomeDetail Viewable
 protocol HomeDetailViewable: AnyObject {
