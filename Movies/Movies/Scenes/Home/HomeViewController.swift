@@ -23,7 +23,7 @@ final class HomeViewController:
             SegmentItem(title: LocStrings.Movies.modules_movies_popular_segment_title),
             SegmentItem(title: LocStrings.Movies.modules_movies_top_rated_segment_title),
             SegmentItem(title: LocStrings.Movies.modules_movies_upcoming_segment_title)
-            ]
+        ]
         
         let segmentedControl = FluentUI.SegmentedControl(items: segmentItems, style: .primaryPill)
         segmentedControl.addTarget(self, action: #selector(didTapSegment(forControl:)), for: .valueChanged)
@@ -31,11 +31,13 @@ final class HomeViewController:
         
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         
+        segmentedControl.accessibilityIdentifier = "segmentedControl"
+        
         return segmentedControl
     }()
     
     // TODO: Add shimmer
-    lazy var moviesTableView: UITableView = {
+    private lazy var moviesTableView: UITableView = {
         let tableView = UITableView(frame: .init(), style: .insetGrouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
