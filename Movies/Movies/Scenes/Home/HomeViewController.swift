@@ -102,6 +102,9 @@ final class HomeViewController:
                 self?.moviesTableView.deselectRow(at: indexPath, animated: true)
             }
             .disposed(by: disposeBag)
+        
+//        moviesTableView.rx.reachedBottom
+//                .disposed(by: disposeBag)
     }
         
     private func setUpView() {
