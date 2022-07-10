@@ -87,7 +87,7 @@ final class HomeViewController:
                     configuration.text = "\(movieModel.title)"
                     configuration.imageProperties.maximumSize = CGSize(width: 50, height: UIScreen.main.bounds.height * 0.2)
                     
-                    self?.presenter?.getPosterImage(parameters: .init(posterURL: movieModel.posterPath))
+                    self?.presenter?.getPosterImage(parameters: .init(posterURL: movieModel.posterPath ?? ""))
                         .observe(on: MainScheduler.instance)
                         .subscribe(onNext: { posterEntity in
                             configuration.image = posterEntity.image

@@ -44,7 +44,7 @@ final class HomeDetailPresenter<View, Router, Interactor>: HomeDetailPresentable
         self.view.movieEntityObservable
             .onNext(parameters.movieDetail)
         
-        getPosterImage(parameters: .init(posterURL: parameters.movieDetail.posterPath))
+        getPosterImage(parameters: .init(posterURL: parameters.movieDetail.posterPath ?? ""))
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] posterEntity in
                 self?.view.posterImageObservable

@@ -39,8 +39,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
         )
         
         tabBarController.viewControllers = [
-            home,
             search,
+            home,
+            
             favorites
         ]
         
