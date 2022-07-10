@@ -31,7 +31,8 @@ final class HomeDetailViewController:
     private let posterView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
         imageView.image = UIImage(systemName: "house")
         return imageView
     }()
@@ -40,7 +41,7 @@ final class HomeDetailViewController:
        let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.isEditable = false
-        textView.font = UIFont(descriptor: .init(), size: 18)
+        textView.font = UIModel.Fonts.movieDescriptionTextView
         return textView
     }()
     
@@ -52,7 +53,7 @@ final class HomeDetailViewController:
     private let disposeBag = DisposeBag()
     var navigationTitleObservable = PublishSubject<String>()
     var movieEntityObservable = PublishSubject<MovieResultEntity.Movie>()
-    var posterImageObservable = BehaviorSubject<UIImage?>(value: UIImage(systemName: "house"))
+    var posterImageObservable = BehaviorSubject<UIImage?>(value: nil)
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -105,16 +106,16 @@ final class HomeDetailViewController:
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            posterView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0),
-            posterView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
-            posterView.heightAnchor.constraint(equalToConstant: 400),
-            posterView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
+            posterView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            posterView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            posterView.heightAnchor.constraint(equalToConstant: UIModel.Layout.posterViewHeight),
+            posterView.rightAnchor.constraint(equalTo: view.rightAnchor),
             
-            movieDescription.topAnchor.constraint(equalTo: posterView.bottomAnchor, constant: 30),
-            movieDescription.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            movieDescription.heightAnchor.constraint(equalToConstant: 500),
-            movieDescription.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            movieDescription.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -20)
+            movieDescription.topAnchor.constraint(equalTo: posterView.bottomAnchor, constant: UIModel.Layout.movieDescriptionMarginVer),
+            movieDescription.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: UIModel.Layout.movieDescriptionMarginHor),
+            movieDescription.heightAnchor.constraint(equalToConstant: UIModel.Layout.movieDescriptionHeight),
+            movieDescription.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -UIModel.Layout.movieDescriptionMarginHor),
+            movieDescription.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -UIModel.Layout.movieDescriptionMarginVer)
         ])
     }
     
@@ -123,9 +124,4 @@ final class HomeDetailViewController:
             .bind(to: navigationItem.rx.title)
             .disposed(by: disposeBag)
     }
-
-    // MARK: Viewable
-
-    // MARK: Navigable
-
 }

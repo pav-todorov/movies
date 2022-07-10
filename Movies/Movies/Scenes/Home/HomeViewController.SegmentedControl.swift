@@ -9,6 +9,7 @@ import Foundation
 
 // MARK: - Home View Controller - Segmented Control
 extension HomeViewController {
+    // MARK: Segmented Control
     enum SegmentedControl {
         case NowPlaying
         case Popular

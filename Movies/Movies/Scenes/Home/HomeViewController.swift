@@ -50,7 +50,7 @@ final class HomeViewController:
     var disposeBag = DisposeBag()
     var moviesTableItemsObservable = PublishSubject<MovieResultEntity>()
     
-    private typealias UIModel = HomeModel
+    private typealias UIModel = HomeUIModel
     private typealias LocStrings = LocalizedStrings.Modules
 
     // MARK: Lifecycle

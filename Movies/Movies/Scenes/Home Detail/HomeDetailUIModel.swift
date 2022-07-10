@@ -15,6 +15,11 @@ struct HomeDetailUIModel {
     // MARK: Layout
     struct Layout {
         // MARK: Properties
+        static var posterViewHeight: CGFloat { UIScreen.main.bounds.height * 0.7 }
+        
+        static var movieDescriptionMarginHor: CGFloat { 10 }
+        static var movieDescriptionMarginVer: CGFloat { 30 }
+        static var movieDescriptionHeight: CGFloat { 500 }
         
         // MARK: Initializers
         private init() {}
@@ -32,22 +37,7 @@ struct HomeDetailUIModel {
     // MARK: Fonts
     struct Fonts {
         // MARK: Properties
-        
-        // MARK: Initializers
-        private init() {}
-    }
-
-    // MARK: Animations
-    struct Animations {
-        // MARK: Properties
-        
-        // MARK: Initializers
-        private init() {}
-    }
-
-    // MARK: Misc
-    struct Misc {
-        // MARK: Properties
+        static var movieDescriptionTextView: UIFont? { UIFont(descriptor: .init(), size: 18) }
         
         // MARK: Initializers
         private init() {}

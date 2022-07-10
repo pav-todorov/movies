@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - Home Model
-struct HomeModel {
+struct HomeUIModel {
     // MARK: Initializers
     private init() {}
     
@@ -16,7 +16,7 @@ struct HomeModel {
     struct Layout {
         // MARK: Properties
         static var moviesTableViewCellWidth: CGFloat { 50 }
-        static var moviesTableViewCellHeightMultiplier: CGFloat { 0.2 }
+        static var moviesTableViewCellHeightMultiplier: CGFloat { 0.1 }
         
         static var segmentedControlMarginTop: CGFloat { 50 }
         

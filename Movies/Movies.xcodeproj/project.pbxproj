@@ -45,7 +45,7 @@
 		E9927AB32878B27F001EA9BA /* Search.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9927AB12878B27F001EA9BA /* Search.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E99654152878A68100ACA39B /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99654142878A68100ACA39B /* HomeFactory.swift */; };
 		E99654172878A6A200ACA39B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99654162878A6A200ACA39B /* HomePresenter.swift */; };
-		E99654192878A6C000ACA39B /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99654182878A6C000ACA39B /* HomeModel.swift */; };
+		E99654192878A6C000ACA39B /* HomeUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99654182878A6C000ACA39B /* HomeUIModel.swift */; };
 		E996541B2878A6D600ACA39B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996541A2878A6D600ACA39B /* HomeRouter.swift */; };
 		E996541D2878A6EE00ACA39B /* HomeInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996541C2878A6EE00ACA39B /* HomeInterface.swift */; };
 		E996541F2878A6FF00ACA39B /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E996541E2878A6FF00ACA39B /* HomeInteractor.swift */; };
@@ -136,7 +136,7 @@
 		E9927AB12878B27F001EA9BA /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99654142878A68100ACA39B /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		E99654162878A6A200ACA39B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		E99654182878A6C000ACA39B /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		E99654182878A6C000ACA39B /* HomeUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIModel.swift; sourceTree = "<group>"; };
 		E996541A2878A6D600ACA39B /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		E996541C2878A6EE00ACA39B /* HomeInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInterface.swift; sourceTree = "<group>"; };
 		E996541E2878A6FF00ACA39B /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
@@ -307,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				E99654142878A68100ACA39B /* HomeFactory.swift */,
-				E99654182878A6C000ACA39B /* HomeModel.swift */,
+				E99654182878A6C000ACA39B /* HomeUIModel.swift */,
 				E99654162878A6A200ACA39B /* HomePresenter.swift */,
 				E996541A2878A6D600ACA39B /* HomeRouter.swift */,
 				E996541C2878A6EE00ACA39B /* HomeInterface.swift */,
@@ -579,7 +579,7 @@
 				E9363DD72879673E00563999 /* Keys.swift in Sources */,
 				E9363E3D2879BDC300563999 /* HomeDetailFactory.swift in Sources */,
 				E996541D2878A6EE00ACA39B /* HomeInterface.swift in Sources */,
-				E99654192878A6C000ACA39B /* HomeModel.swift in Sources */,
+				E99654192878A6C000ACA39B /* HomeUIModel.swift in Sources */,
 				E9363E402879BDC300563999 /* HomeDetailRouter.swift in Sources */,
 				E9363E2D2879A6AF00563999 /* GetNowPlayingMoviesGatewayParameters.swift in Sources */,
 				E99654172878A6A200ACA39B /* HomePresenter.swift in Sources */,
