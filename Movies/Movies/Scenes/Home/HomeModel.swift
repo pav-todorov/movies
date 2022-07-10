@@ -15,6 +15,12 @@ struct HomeModel {
     // MARK: Layout
     struct Layout {
         // MARK: Properties
+        static var moviesTableViewCellWidth: CGFloat { 50 }
+        static var moviesTableViewCellHeightMultiplier: CGFloat { 0.2 }
+        
+        static var segmentedControlMarginTop: CGFloat { 50 }
+        
+        static var moviesTableViewMarginTop: CGFloat { 20 }
         
         // MARK: Initializers
         private init() {}
@@ -24,30 +30,6 @@ struct HomeModel {
     struct Colors {
         // MARK: Properties
         static var background: UIColor? { .systemBackground }
-        
-        // MARK: Initializers
-        private init() {}
-    }
-
-    // MARK: Fonts
-    struct Fonts {
-        // MARK: Properties
-        
-        // MARK: Initializers
-        private init() {}
-    }
-
-    // MARK: Animations
-    struct Animations {
-        // MARK: Properties
-        
-        // MARK: Initializers
-        private init() {}
-    }
-
-    // MARK: Misc
-    struct Misc {
-        // MARK: Properties
         
         // MARK: Initializers
         private init() {}

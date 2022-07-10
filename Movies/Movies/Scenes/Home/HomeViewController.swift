@@ -19,10 +19,10 @@ final class HomeViewController:
     // MARK: Subviews
     private lazy var segmentedControl: FluentUI.SegmentedControl = {
         let segmentItems: [FluentUI.SegmentItem] = [
-            SegmentItem(title: LocStrings.modules_movies_now_playing_segment_title),
-            SegmentItem(title: LocStrings.modules_movies_popular_segment_title),
-            SegmentItem(title: LocStrings.modules_movies_top_rated_segment_title),
-            SegmentItem(title: LocStrings.modules_movies_upcoming_segment_title)
+            SegmentItem(title: LocStrings.Movies.modules_movies_now_playing_segment_title),
+            SegmentItem(title: LocStrings.Movies.modules_movies_popular_segment_title),
+            SegmentItem(title: LocStrings.Movies.modules_movies_top_rated_segment_title),
+            SegmentItem(title: LocStrings.Movies.modules_movies_upcoming_segment_title)
             ]
         
         let segmentedControl = FluentUI.SegmentedControl(items: segmentItems, style: .primaryPill)
@@ -51,7 +51,7 @@ final class HomeViewController:
     var moviesTableItemsObservable = PublishSubject<MovieResultEntity>()
     
     private typealias UIModel = HomeModel
-    private typealias LocStrings = LocalizedStrings.Modules.Movies
+    private typealias LocStrings = LocalizedStrings.Modules
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -77,7 +77,7 @@ final class HomeViewController:
                 cellType: TableViewCell.self)) { [weak self] row, movieModel, cell in
                     var configuration = cell.defaultContentConfiguration()
                     configuration.text = "\(movieModel.title)"
-                    configuration.imageProperties.maximumSize = CGSize(width: 50, height: UIScreen.main.bounds.height * 0.2)
+                    configuration.imageProperties.maximumSize = CGSize(width: UIModel.Layout.moviesTableViewCellWidth, height: UIScreen.main.bounds.height * UIModel.Layout.moviesTableViewCellHeightMultiplier)
                     
                     self?.presenter?.getPosterImage(parameters: .init(posterURL: movieModel.posterPath ?? ""))
                         .observe(on: MainScheduler.instance)
@@ -116,17 +116,17 @@ final class HomeViewController:
     
     private func setUpLayout() {
         NSLayoutConstraint.activate([
-            segmentedControl.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
+            segmentedControl.topAnchor.constraint(equalTo: view.topAnchor, constant: UIModel.Layout.segmentedControlMarginTop),
             
             moviesTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             moviesTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            moviesTableView.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: 20),
+            moviesTableView.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor, constant: UIModel.Layout.moviesTableViewMarginTop),
             moviesTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
     
     private func setUpNavBar() {
-        navigationItem.title = "Home"
+        navigationItem.title = LocStrings.Tabbar.modules_tabbar_home_title
     }
 
     // MARK: Observers
