@@ -49,7 +49,6 @@ final class HomeViewController:
     
     var disposeBag = DisposeBag()
     var moviesTableItemsObservable = PublishSubject<MovieResultEntity>()
-    var moviePostersObservable = PublishSubject<GetPosterImageEntity>()
     
     private typealias UIModel = HomeModel
 
@@ -70,7 +69,6 @@ final class HomeViewController:
     }
     
     private func bindViews() {
-        
         moviesTableItemsObservable
             .compactMap({ $0.results })
             .bind(to: moviesTableView.rx.items(
@@ -82,8 +80,9 @@ final class HomeViewController:
                     
                     self?.presenter?.getPosterImage(parameters: .init(posterURL: movieModel.posterPath ?? ""))
                         .observe(on: MainScheduler.instance)
-                        .subscribe(onNext: { posterEntity in
-                            configuration.image = posterEntity.image
+                        .compactMap({ $0.image })
+                        .subscribe(onNext: { image in
+                            configuration.image = image
                         })
                         .dispose()
                     

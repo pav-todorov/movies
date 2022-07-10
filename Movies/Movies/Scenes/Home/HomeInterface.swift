@@ -14,7 +14,6 @@ import Shared_Models
 // MARK: - Home Viewable
 protocol HomeViewable: AnyObject {
     var moviesTableItemsObservable: PublishSubject<MovieResultEntity> { get }
-    var moviePostersObservable: PublishSubject<GetPosterImageEntity> { get }
 }
 
 // MARK: - Home Navigable

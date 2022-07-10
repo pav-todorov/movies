@@ -58,6 +58,12 @@
 		E99EABCD28789D98006BD772 /* MoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99EABCC28789D98006BD772 /* MoviesTests.swift */; };
 		E99EABD728789D98006BD772 /* MoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99EABD628789D98006BD772 /* MoviesUITests.swift */; };
 		E99EABD928789D98006BD772 /* MoviesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99EABD828789D98006BD772 /* MoviesUITestsLaunchTests.swift */; };
+		E9EE4183287B254200D89135 /* GetPosterImageNetworkGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9363E4C2879CAF100563999 /* GetPosterImageNetworkGateway.swift */; };
+		E9EE4184287B271900D89135 /* GetPosterImageParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9363E4A2879CAB600563999 /* GetPosterImageParameters.swift */; };
+		E9EE4186287B273200D89135 /* GetPosterImageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9363E482879CA9300563999 /* GetPosterImageEntity.swift */; };
+		E9EE4187287B27FF00D89135 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9363DD62879673E00563999 /* Keys.swift */; };
+		E9EE4188287B280900D89135 /* GetPosterImageGatewayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9363E462879CA4200563999 /* GetPosterImageGatewayable.swift */; };
+		E9EE4189287B282200D89135 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9363DDA2879694400563999 /* APIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +128,8 @@
 		E9363E482879CA9300563999 /* GetPosterImageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPosterImageEntity.swift; sourceTree = "<group>"; };
 		E9363E4A2879CAB600563999 /* GetPosterImageParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPosterImageParameters.swift; sourceTree = "<group>"; };
 		E9363E4C2879CAF100563999 /* GetPosterImageNetworkGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPosterImageNetworkGateway.swift; sourceTree = "<group>"; };
+		E95B97CC287B05DE00B0A353 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E95B97CD287B061A00B0A353 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E98D5D3B287AA82500C39F5A /* Shared_Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Shared_Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9927AB12878B27F001EA9BA /* Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E99654142878A68100ACA39B /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
@@ -491,6 +499,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				bg,
 			);
 			mainGroup = E99EABA628789D95006BD772;
 			packageReferences = (
@@ -583,7 +593,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EE4184287B271900D89135 /* GetPosterImageParameters.swift in Sources */,
+				E9EE4189287B282200D89135 /* APIKey.swift in Sources */,
 				E99EABCD28789D98006BD772 /* MoviesTests.swift in Sources */,
+				E9EE4186287B273200D89135 /* GetPosterImageEntity.swift in Sources */,
+				E9EE4183287B254200D89135 /* GetPosterImageNetworkGateway.swift in Sources */,
+				E9EE4188287B280900D89135 /* GetPosterImageGatewayable.swift in Sources */,
+				E9EE4187287B27FF00D89135 /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,6 +632,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				E99EABC128789D97006BD772 /* Base */,
+				E95B97CC287B05DE00B0A353 /* es */,
+				E95B97CD287B061A00B0A353 /* bg */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -627,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -687,6 +706,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

@@ -13,7 +13,7 @@ import Shared_Models
 protocol HomeDetailViewable: AnyObject {
     var navigationTitleObservable: PublishSubject<String> { get }
     var movieEntityObservable: PublishSubject<MovieResultEntity.Movie> { get }
-    var posterImageObservable: PublishSubject<UIImage?> { get }
+    var posterImageObservable: BehaviorSubject<UIImage?> { get }
 }
 
 // MARK: - HomeDetail Navigable

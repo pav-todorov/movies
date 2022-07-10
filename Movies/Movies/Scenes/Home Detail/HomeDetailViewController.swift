@@ -31,7 +31,7 @@ final class HomeDetailViewController:
     private let posterView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         imageView.image = UIImage(systemName: "house")
         return imageView
     }()
@@ -52,7 +52,7 @@ final class HomeDetailViewController:
     private let disposeBag = DisposeBag()
     var navigationTitleObservable = PublishSubject<String>()
     var movieEntityObservable = PublishSubject<MovieResultEntity.Movie>()
-    var posterImageObservable = PublishSubject<UIImage?>()
+    var posterImageObservable = BehaviorSubject<UIImage?>(value: UIImage(systemName: "house"))
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -74,6 +74,7 @@ final class HomeDetailViewController:
         posterImageObservable
             .observe(on: MainScheduler.instance)
             .asDriver(onErrorJustReturn: UIImage(systemName: "xmark.octagon"))
+            .compactMap({ $0 })
             .drive(posterView.rx.image)
             .disposed(by: disposeBag)
         
@@ -106,7 +107,7 @@ final class HomeDetailViewController:
             
             posterView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0),
             posterView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
-            posterView.heightAnchor.constraint(equalToConstant: 250),
+            posterView.heightAnchor.constraint(equalToConstant: 400),
             posterView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
             
             movieDescription.topAnchor.constraint(equalTo: posterView.bottomAnchor, constant: 30),
