@@ -8,6 +8,7 @@
 import SwiftUI
 import Search
 import Favorites
+import Shared_Models
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDelegate {
 
@@ -24,14 +25,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
             selectedImage: .init(systemName: "house.circle.fill")
         )
         
-        let search = UIHostingController(rootView: SearchView())
+        let search = UIHostingController(
+            rootView: SearchView()
+                .environment(
+                    \.managedObjectContext,
+                     CoreDataManager.shared.persistentContainer.viewContext)
+        )
         search.tabBarItem = UITabBarItem(
             title: "Search",
             image: .init(systemName: "magnifyingglass.circle"),
             selectedImage: .init(systemName: "magnifyingglass.circle.fill")
         )
         
-        let favorites = UIHostingController(rootView: FavoritesView())
+        let favorites = UIHostingController(rootView: FavoritesView()
+            .environment(
+                \.managedObjectContext,
+                 CoreDataManager.shared.persistentContainer.viewContext)
+        )
         favorites.tabBarItem = UITabBarItem(
             title: "Favorites",
             image: .init(systemName: "star.circle"),
@@ -39,9 +49,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UITabBarControllerDeleg
         )
         
         tabBarController.viewControllers = [
-            search,
             home,
-            
+            search,
             favorites
         ]
         

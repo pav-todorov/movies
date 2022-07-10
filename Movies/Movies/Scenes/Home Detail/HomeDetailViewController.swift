@@ -18,7 +18,6 @@ final class HomeDetailViewController:
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.backgroundColor = .systemMint
         return scrollView
     }()
     
@@ -33,7 +32,6 @@ final class HomeDetailViewController:
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
-        imageView.backgroundColor = .blue
         imageView.image = UIImage(systemName: "house")
         return imageView
     }()
@@ -42,8 +40,7 @@ final class HomeDetailViewController:
        let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.isEditable = false
-        textView.backgroundColor = .yellow
-        textView.textColor = .blue
+        textView.font = UIFont(descriptor: .init(), size: 18)
         return textView
     }()
     
@@ -98,8 +95,6 @@ final class HomeDetailViewController:
         
         scrollView.addSubview(posterView)
         scrollView.addSubview(movieDescription)
-        
-//        scrollView.addSubview(contentWrapper)
     }
 
     private func setUpLayout() {

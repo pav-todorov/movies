@@ -27,6 +27,7 @@ final class HomeViewController:
         
         let segmentedControl = FluentUI.SegmentedControl(items: segmentItems, style: .primaryPill)
         segmentedControl.addTarget(self, action: #selector(didTapSegment(forControl:)), for: .valueChanged)
+        segmentedControl.backgroundColor = .clear
         
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
         
@@ -35,7 +36,7 @@ final class HomeViewController:
     
     // TODO: Add shimmer
     lazy var moviesTableView: UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .init(), style: .insetGrouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.identifier)
         tableView.separatorStyle = .none
@@ -69,14 +70,6 @@ final class HomeViewController:
     }
     
     private func bindViews() {
-//        let source1 = moviesTableItemsObservable.asObservable()
-//            .map({ $0 as AnyObject })
-//
-//        let source2 = moviePostersObservable.asObservable()
-//            .map({ $0 as AnyObject })
-//
-//        let trueSource = Observable.of(source1, source2)
-//        trueSource.merge()
         
         moviesTableItemsObservable
             .compactMap({ $0.results })
@@ -105,18 +98,13 @@ final class HomeViewController:
             }
             .disposed(by: disposeBag)
         
-//        moviePostersObservable
-//            .observe(on: MainScheduler.instance)
-//            .asDriver(onErrorJustReturn: .init(image: nil))
-//            .compactMap({ [$0.image] })
-//            .drive(moviesTableView.rx.items(cellIdentifier: TableViewCell.identifier, cellType: TableViewCell.self)) { row, image, cell in
-//                var configuration = cell.defaultContentConfiguration()
-//                configuration.image = image
-//                cell.contentConfiguration = configuration
-//            }
-//            .disposed(by: disposeBag)
+        moviesTableView.rx.itemSelected
+            .subscribe { [weak self] indexPath in
+                self?.moviesTableView.deselectRow(at: indexPath, animated: true)
+            }
+            .disposed(by: disposeBag)
     }
-    
+        
     private func setUpView() {
         view.backgroundColor = UIModel.Colors.background
     }
@@ -140,10 +128,6 @@ final class HomeViewController:
     private func setUpNavBar() {
         navigationItem.title = "Home"
     }
-
-    // MARK: Viewable
-
-    // MARK: Navigable
 
     // MARK: Observers
     @objc private func didTapSegment(forControl control: FluentUI.SegmentedControl){

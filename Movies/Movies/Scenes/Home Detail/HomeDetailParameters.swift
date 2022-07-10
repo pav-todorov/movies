@@ -12,7 +12,4 @@ import Shared_Models
 struct HomeDetailParameters {
     // MARK: Properties
     let movieDetail: MovieResultEntity.Movie
-    
-    // MARK: Preview
-    static var mock: Self { .init(movieDetail: .init()) }
 }
